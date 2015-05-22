@@ -1,0 +1,7 @@
+# matplotlib
+# numpy
+# scipy
+# scikit-learn
+# above should be installed with scipystack image anyway
+seaborn
+moviepy
