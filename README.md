@@ -16,13 +16,13 @@ docker run -d -p 8888:8888 -p 80:80 zischwartz/thebe-local-docker:ffmpeg
 ## Build the Image
 
 ```bash
-docker build -t zischwartz/thebe-standalone  .
+docker build -t zischwartz/thebe-local-docker  .
 ```
 
 ## To Run 
 
 ```bash
-docker run -d -p 8888:8888 -p 80:80 -v $PWD/public:/var/www/html zischwartz/thebe-standalone
+docker run -d -p 8888:8888 -p 80:80 -v $PWD/public:/var/www/html zischwartz/thebe-local-docker
 ```
 
 Assuming you're running boot2docker, now you can visit http://192.168.59.103 in your browser.
@@ -46,5 +46,5 @@ chmod -R a+r public
 ## Run Container Interactively & SSH In For Debugging
 
 ```bash
-docker run  -p 8888:8888 -p 80:80 -i -t --entrypoint /bin/bash zischwartz/thebe-standalone
+docker run  -p 8888:8888 -p 80:80 -i -t --entrypoint /bin/bash zischwartz/thebe-local-docker
 ```
