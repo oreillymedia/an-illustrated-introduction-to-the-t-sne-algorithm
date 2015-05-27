@@ -6,12 +6,9 @@
 @import "oreilly.css";
 @import "syntax.css";
 @import "thebe.css";*/
-
 /*
-in js
-addclass .page to top/first section "data-type chapter" ? and text?
 
-add full to all code cells
+in js we addclass .page to section[data-type=chapter]
 */
 
 .page {
@@ -20,6 +17,7 @@ add full to all code cells
 
 .cell {
   width: 100% !important;
+  margin-left: 0% !important;
 }
 
 h1 {
@@ -31,4 +29,3 @@ section.page > h1:first-of-type {
   font-size: 4em;
   margin-bottom: 1.5em;
 }
-
