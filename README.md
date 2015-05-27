@@ -8,15 +8,14 @@ You can run this in a docker container with all the dependencies pre-installed, 
 After `boot2docker start`:
 
 ```
-docker pull zischwartz/thebe-local-docker:ffmpeg
-docker run -d -p 8888:8888 -p 80:80 zischwartz/thebe-local-docker:ffmpeg
+docker pull oreilly/an-illustrated-introduction-to-the-t-sne-algorithm
+docker run -d -p 8888:8888 -p 80:80 oreilly/an-illustrated-introduction-to-the-t-sne-algorithm
 open http://$(boot2docker ip)
 ```
 
 If the last step doesn't work, run `boot2docker ip` and visit that address in a browser. Generally, it's [http://192.168.59.103](http://192.168.59.103).
 
 Note, this won't work if you're running another container that binds to these ports (80 and 8888).
-
 
 ## More Info 
 
@@ -28,13 +27,13 @@ Originally based on [this](https://github.com/ipython/docker-notebook/tree/maste
 For this, you need to clone down this repo, and then from this directory.
 
 ```
-docker build -t zischwartz/thebe-local-docker  .
+docker build -t oreilly/an-illustrated-introduction-to-the-t-sne-algorithm  .
 ```
 
 ### To Run 
 
 ```
-docker run -d -p 8888:8888 -p 80:80 -v $PWD/public:/var/www/html zischwartz/thebe-local-docker
+docker run -d -p 8888:8888 -p 80:80 -v $PWD/public:/var/www/html oreilly/an-illustrated-introduction-to-the-t-sne-algorithm
 ```
 
 Assuming you're running boot2docker, now you can visit http://192.168.59.103 in your browser.
@@ -43,22 +42,5 @@ Assuming you're running boot2docker, now you can visit http://192.168.59.103 in 
 ### Run Container Interactively & SSH In For Debugging
 
 ```
-docker run  -p 8888:8888 -p 80:80 -i -t --entrypoint /bin/bash zischwartz/thebe-local-docker
+docker run  -p 8888:8888 -p 80:80 -i -t --entrypoint /bin/bash oreilly/an-illustrated-introduction-to-the-t-sne-algorithm
 ```
-
-*Note:* I've been having trouble with the `-v` docker flag for volumes. Powering off  and on boot2docker seems to work it, but is a terrible solution.
-
-
-### Build htmlbook
-
-```
-node ~/code/gulp-htmlbook/bin/gulp-htmlbook.js --envPath ~/code/gulp-htmlbook/.env --configPath $PWD/example_content/atlas.json --destination $PWD/public --copyAll
-```
-
-Next add the thebe assets
-
-```
-cp -R thebe_assets/ public/thebe_assets 
-chmod -R a+r public
-```
-
