@@ -1,9 +1,9 @@
 # An Illustrated Introduction to the t-SNE Algorithm
-This is an interactive introduction to a popular dimensionality reduction algorithm: t-distributed stochastic neighbor embedding (t-SNE). Developed by Laurens van der Maaten and Geoffrey Hinton (see the original paper here), this algorithm has been successfully applied to many real-world datasets. Here, we'll follow the original paper and describe the key mathematical concepts of the method, when applied to a toy dataset (handwritten digits). We'll use Python and the scikit-learn library.
+This is an interactive introduction to a popular dimensionality reduction algorithm: t-distributed stochastic neighbor embedding (t-SNE). Developed by Laurens van der Maaten and Geoffrey Hinton, this algorithm has been successfully applied to many real-world datasets. Here, we'll follow the original paper and describe the key mathematical concepts of the method, when applied to a toy dataset (handwritten digits). We'll use Python and the scikit-learn library.
 
 ## Quickstart 
 
-You can run this in a docker container with all the dependencies pre-installed, interactively in your browser.
+You can run this in a docker container with all the dependencies pre-installed, interactively in your browser, by pulling [this image](https://registry.hub.docker.com/u/oreilly/an-illustrated-introduction-to-the-t-sne-algorithm/) from docker hub.
 
 After `boot2docker start`:
 
